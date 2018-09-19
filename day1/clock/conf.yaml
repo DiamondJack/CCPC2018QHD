@@ -4,13 +4,15 @@ data:
 - cases: [1]
 folder: problem
 memory limit: 512 MB
-name: sequence
+name: clock
 partial score: false
 pre: []
 samples:
-- cases: [1, 2]
+- cases: [1]
 time limit: 1.0
-title: {zh-cn: sequence}
+title: {zh-cn: Niuniu's Clock}
 type: program
-users: {}
+users:
+  ufozgg:
+    std.cpp: {expected: == 100, path: ufozgg/std.cpp}
 version: 2
