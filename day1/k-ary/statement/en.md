@@ -43,7 +43,7 @@ First line of the input is an integer $T$, denotes the number of the testcases. 
 
 Each of the following $T$ lines provides two integers $n,k$, denotes that Chimaki generates $k$-ary trees contains $n$ node(s).
 
-It is guaranteed that in each testcases the value of $n,k$ satisfies $1\le n\le 6\times 10^4, 1\le k \le 10^9$. There are at 
+It is guaranteed that in each testcases the value of $n,k$ satisfies $1\le n\le 6\times 10^4, 1\le k \le 10^9$. There are at most 3 testcases with $n \ge 4\times 10^4$.
 
 {{ s('output format') }}
 
