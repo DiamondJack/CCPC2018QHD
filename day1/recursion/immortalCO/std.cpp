@@ -58,9 +58,10 @@ Value calc(int bit, bool freeN, bool freeM) {
 				for(int Madd = 0; Madd <= 1; ++Madd) {
 					int Nr = Nx + Nadd, Mr = Mx + Madd;
 					Data cur = d.val[Nr & 1][Mr & 1][Nadd][Madd].connect((ll) Tval[Nr & 15][Mr & 15] * pwr[bit - 1] % mod);
+					auto _Tmov = Tmov[Nr & 15][Mr & 15];
 					for(int Nout = 0; Nout <= 1; ++Nout)
 						for(int Mout = 0; Mout <= 1; ++Mout) {							
-							auto mov = Tmov[Nr & 15][Mr & 15][bool((Nr + (Nout << 4)) & 16)][bool((Mr + (Mout << 4)) & 16)];
+							auto mov = _Tmov[bool((Nr + (Nout << 4)) & 16)][bool((Mr + (Mout << 4)) & 16)];
 							ans.val[Nout][Mout][mov[0] + (Nr >> 4)][mov[1] + (Mr >> 4)] += cur;
 						}
 					}
