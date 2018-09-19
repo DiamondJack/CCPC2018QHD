@@ -54,16 +54,16 @@ Value calc(int bit, bool freeN, bool freeM) {
 	for(int Nx = Nl; Nx <= Nr; ++Nx)
 		for(int Mx = Ml; Mx <= Mr; ++Mx) {
 			Value d(calc(bit - 1, freeN || Nx != N[bit], freeM || Mx != M[bit]));
-			for(int Nout = 0; Nout <= 1; ++Nout)
-				for(int Mout = 0; Mout <= 1; ++Mout)
-					for(int Nadd = 0; Nadd <= 1; ++Nadd)
-						for(int Madd = 0; Madd <= 1; ++Madd) {
-							int Nr = Nx + Nadd, Mr = Mx + Madd;
-							Data cur = d.val[Nr & 1][Mr & 1][Nadd][Madd].connect((ll) Tval[Nr & 15][Mr & 15] * pwr[bit - 1] % mod);
+			for(int Nadd = 0; Nadd <= 1; ++Nadd)
+				for(int Madd = 0; Madd <= 1; ++Madd) {
+					int Nr = Nx + Nadd, Mr = Mx + Madd;
+					Data cur = d.val[Nr & 1][Mr & 1][Nadd][Madd].connect((ll) Tval[Nr & 15][Mr & 15] * pwr[bit - 1] % mod);
+					for(int Nout = 0; Nout <= 1; ++Nout)
+						for(int Mout = 0; Mout <= 1; ++Mout) {							
 							auto mov = Tmov[Nr & 15][Mr & 15][bool((Nr + (Nout << 4)) & 16)][bool((Mr + (Mout << 4)) & 16)];
-///*bgg*/assert(mov[0] + (Nr >> 4) <= 1 && mov[1] + (Mr >> 4) <= 1);
 							ans.val[Nout][Mout][mov[0] + (Nr >> 4)][mov[1] + (Mr >> 4)] += cur;
 						}
+					}
 		}
 
 	vis[bit][freeN][freeM] = timer;
