@@ -9,10 +9,11 @@ partial score: false
 pre: []
 samples:
 - cases: [1]
-time limit: 10.0
+time limit: 20.0
 title: {en: Touchable Happiness}
 type: program
 users:
   immortalCO:
-    std.cpp: {expected: == 100, path: immortalCO/std.cpp}
+    mlog2m: {expected: == 100, path: immortalCO/mlog2m.cpp}
+    nm: {expected: == 0, path: immortalCO/nm.cpp}
 version: 2

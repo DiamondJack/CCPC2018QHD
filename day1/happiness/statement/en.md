@@ -26,6 +26,6 @@ We say if two ways to buy candies are different, if and only if there exists a s
 
 {{ s('subtasks') }}
 
-$n\le 10^5, m\le 5\times 10^4, T\le 100$.
+$n\le 10^5, m\le 5\times 10^4, T\le 100, n_i\le 5, 0\le a_{i,j}< 998,244,353, a_{i,n_i}\ne 0$.
 
 No more than $3$ test cases that $n,m\ge 10^3$.
