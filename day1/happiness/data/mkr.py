@@ -1,8 +1,8 @@
 from random import *
 
-mod = 998244353
+mod = 3#998244353
 
-C = [(randint(500, 1000), randint(500, 1000)) for i in xrange(97)] + [(100000, 50000)] * 3
+C = [(5, 4)] #[(randint(500, 1000), randint(500, 1000)) for i in xrange(97)] + [(100000, 50000)] * 3
 shuffle(C)
 print len(C)
 for (N, Q) in C:
