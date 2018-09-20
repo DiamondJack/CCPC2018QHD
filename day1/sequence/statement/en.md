@@ -38,7 +38,7 @@ Output $n+1$ lines, $1$ integer per line. The $i$-th line is the score of the se
 
 {{ self.title_sample_description() }}
 
-The expressions for the $4$ scheme of the initial sequence are: $1+2+3=6$, $1+2\times 3=7$, $1\times 2+3=5$, $1\times 2\times 3 =3$, so the sequence score is $6+7+5+3=21$.
+The expressions for the $4$ scheme of the initial sequence are: $1+2+3=6$, $1+2\times 3=7$, $1\times 2+3=5$, $1\times 2\times 3 =6$, so the sequence score is $6+7+5+6=24$.
 
 After the $1$st modification, the new sequence is $4,2,3$.
 
