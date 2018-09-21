@@ -12,5 +12,7 @@ samples:
 time limit: 1.0
 title: {zh-cn: sequence}
 type: program
-users: {}
+users:
+  wyz:
+    std.cpp: {expected: == 100, path: wyz/std.cpp}
 version: 2

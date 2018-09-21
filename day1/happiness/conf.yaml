@@ -6,7 +6,8 @@ folder: problem
 memory limit: 1 GB
 name: happiness
 partial score: false
-pre: []
+pre:
+- cases: [1]
 samples:
 - cases: [1]
 time limit: 20.0
