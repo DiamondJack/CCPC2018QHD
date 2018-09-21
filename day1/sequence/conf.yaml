@@ -10,7 +10,9 @@ pre: []
 samples:
 - cases: [1, 2]
 time limit: 1.0
-title: {zh-cn: sequence}
+title: {zh-cn: Sequence}
 type: program
-users: {}
+users:
+  wyz:
+    std.cpp: {expected: == 100, path: wyz/std.cpp}
 version: 2
