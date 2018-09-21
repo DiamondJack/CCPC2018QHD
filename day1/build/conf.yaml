@@ -23,7 +23,7 @@ partial score: false
 samples:
 - cases: [1, 2]
 time limit: 4.0
-title: {zh-cn: build}
+title: {zh-cn: Build}
 type: program
 users:
   lzj:
