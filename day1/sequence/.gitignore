@@ -28,3 +28,8 @@ arbiter*
 *.tmp
 **.class
 **.pyc
+std
+force
+*.in
+*.out
+*.ans

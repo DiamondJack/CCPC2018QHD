@@ -12,19 +12,19 @@ int fast_pow(int x,int y,int mod=P){
 	}
 	return ret;
 }
-int inv(int x,int mod=P){
+inline int inv(int x,int mod=P){
 	return fast_pow(x,mod-2);
 }
-void inc(int &x,int y){
+inline void inc(int &x,int y){
 	if ((x+=y)>=P) x-=P;
 }
-void inc(int &x,ll y){
+inline void inc(int &x,ll y){
 	x=(x+y)%P;
 }
-void dec(int &x,int y){
+inline void dec(int &x,int y){
 	if ((x-=y)<0) x+=P;
 }
-void dec(int &x,ll y){
+inline void dec(int &x,ll y){
 	if ((x=(x-y)%P)<0) x+=P;
 }
 const int inv2=(P+1)>>1;
@@ -58,12 +58,13 @@ struct SegmentTree{
 			t[x].sum=seq[l];
 			return;
 		}
-		int mid=(l+r)/2;
+		int mid=(l+r)>>1;
 		build(x<<1,l,mid,seq);
 		build(x<<1^1,mid+1,r,seq);
 		PushUp(x);
 	}
 	void multiply(int x,int l,int r,int k){
+		if (l>r) return;
 		PushDown(x);
 		if (l<=t[x].l&&t[x].r<=r){mult(x,k);return;}
 		int mid=(t[x].l+t[x].r)>>1;
@@ -72,12 +73,13 @@ struct SegmentTree{
 		PushUp(x);
 	}
 	int qsum(int x,int l,int r){
+		if (l>r) return 0;
 		PushDown(x);
 		if (l<=t[x].l&&t[x].r<=r) return t[x].sum;
 		int mid=(t[x].l+t[x].r)>>1;
 		if (r<=mid) return qsum(x<<1,l,r);
 		if (l>mid) return qsum(x<<1^1,l,r);
-		return qsum(x<<1,l,r)+qsum(x<<1^1,l,r);
+		return (qsum(x<<1,l,r)+qsum(x<<1^1,l,r))%P;
 	}
 } f,g;
 // f[i]=pre(i)*pow(2,max(n-i-1,0))
@@ -117,8 +119,8 @@ void modify(int x,int val){
 		zero.insert(x);
 	}
 	else if (isZero[x]){
-		f.multiply(1,x,n,inv(a[x])*val);
-		g.multiply(1,x+1,n,a[x]*inv(val));
+		f.multiply(1,x,n,1LL*inv(a[x])*val%P);
+		g.multiply(1,x+1,n,1LL*a[x]*inv(val)%P);
 		inc(ans,1LL*f.qsum(1,x,v-1)*g.qsum(1,u+1,x));
 		isZero[x]=false;
 		zero.erase(zero.find(x));
@@ -126,8 +128,8 @@ void modify(int x,int val){
 	}
 	else{
 		dec(ans,1LL*f.qsum(1,x,v-1)*g.qsum(1,u+1,x));
-		f.multiply(1,x,n,inv(a[x])*val);
-		g.multiply(1,x+1,n,a[x]*inv(val));
+		f.multiply(1,x,n,1LL*inv(a[x])*val%P);
+		g.multiply(1,x+1,n,1LL*a[x]*inv(val)%P);
 		inc(ans,1LL*f.qsum(1,x,v-1)*g.qsum(1,u+1,x));
 		a[x]=val;
 	}
