@@ -24,6 +24,8 @@ For each testcase, its first line contains a positive integer $n$, describing th
 
 It is guaranteed each input is a valid unrooted tree, and the nodes are numbered with consecutive integers from $1$ to $n$.
 
+The sum of $n$ in each input file will not exceed $10^6$.
+
 {{ s('output format') }}
 
 {{ self.output_file() }}
@@ -36,7 +38,3 @@ For each testcase, output a single integer in a line:
 {{ s('sample', 1) }}
 
 {{ self.sample_text() }}
-
-{{ s('subtasks') }}
-
-The sum of $n$ in each input file will not exceed $10^6$.
