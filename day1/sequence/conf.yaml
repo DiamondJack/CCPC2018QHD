@@ -10,7 +10,7 @@ pre: []
 samples:
 - cases: [1, 2]
 time limit: 1.0
-title: {zh-cn: Sequence}
+title: {zh-cn: Yazid's Sequence}
 type: program
 users:
   wyz:
