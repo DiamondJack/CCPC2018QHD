@@ -192,7 +192,7 @@ void pow(int a[], int n, int k, int b[])
 
 int main()
 {
-	freopen("input.txt", "r", stdin);
+	//freopen("input.txt", "r", stdin);
 	::init();
 	static int p[maxn << 2], q[maxn << 2], f[maxn << 2], g[maxn << 2], h[maxn << 2];
 	int T;

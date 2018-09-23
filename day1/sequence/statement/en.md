@@ -2,11 +2,11 @@
 
 ## {{ _('Description') }}
 
-Yazid has a sequence $A$ of length $n$, and now he wants to fill in a plus or multiplier between every two numbers to get an expression. Obviously, he has a total of $2^(n-1)$ different filling schemes. For each schemes, we specify its score as the value of the resulting expression.
+Yazid has a sequence $A$ of length $n$, and now he wants to fill in a plus or multiplier between every two numbers to get an expression. Obviously, he has a total of $2^(n-1)$ different filling schemes. For each scheme, we specify its score as the value of the resulting expression.
 
 The score of a sequence is the sum of all the filling scheme scores modulo $998,244,353$.
 
-Yazid wants to know the score of the sequence. Not only that, Yazid will also make a single point change in $Q$ (modify an element in the sequence $A$), and you will need to tell him the score of the new sequence after each modification.
+Yazid wants to know the score of the sequence. Not only that, but Yazid will also make a single point change in $Q$ (modify an element in the sequence $A$), and you will need to tell him the score of the new sequence after each modification.
 
 ## {{ _('Input Format') }}
 

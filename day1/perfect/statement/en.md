@@ -2,14 +2,14 @@
 
 {{ s('description') }}
 
-Given a positive integer $k$, we define a **rooted** tree to be $k$-perfect, iff it met both conditions below:
+Given a positive integer $k$, we define a **rooted** tree to be $k$-perfect, if and only if it met both conditions below:
 
-* Each node is either a leaf node, or has exactly $k$ direct offsprings.
+* Each node is either a leaf node or has exactly $k$ direct offsprings.
 * All leaf nodes have the same distance to the root, or say, all leaf nodes are of the same depth.
 
 Now you are given an **unrooted** tree, and you should answer these questions:
 
-* Is is possible to assign it a root, such that the tree becomes $k$-perfect for some positive integer $k$?
+* It is possible to assign it a root, such that the tree becomes $k$-perfect for some positive integer $k$?
 * If possible, what is the minimal possible $k$?
 
 {{ s('input format') }}
@@ -20,7 +20,7 @@ Each input file contains multiple testcases.
 
 The first line contains a single positive integer $T$, indicating following are $T$ testcases.
 
-For each testcase, its first line contains a positive integer $n$, describing the number of tree nodes in this testcases; next $n-1$ lines each contains two space-separated integers, where a pair $u,v$ means there exists an edge between node $u$ and $v$ on the tree.
+For each testcase, its first line contains a positive integer $n$, describing the number of tree nodes in this testcase; next $n-1$ lines each contains two space-separated integers, where a pair $u,v$ means there exists an edge between node $u$ and $v$ on the tree.
 
 It is guaranteed each input is a valid unrooted tree, and the nodes are numbered with consecutive integers from $1$ to $n$.
 

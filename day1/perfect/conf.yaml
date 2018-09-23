@@ -2,16 +2,17 @@ args: {n: 1000}
 compile: {c: -O2 -std=c14, cpp: -O2 -std=c++14, java: '', pas: -O2, py: ''}
 data:
 - cases: [1]
+- cases: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
 folder: problem
 memory limit: 512 MB
 name: perfect
 partial score: false
-pre:
-- cases: [1]
 samples:
 - cases: [1]
 time limit: 10.0
 title: {en: Perfect Tree}
 type: program
-users: {}
+users:
+  saffah:
+    std.cpp: {expected: == 100, path: saffah/std.cpp}
 version: 2

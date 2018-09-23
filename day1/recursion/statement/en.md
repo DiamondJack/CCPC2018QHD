@@ -13,7 +13,7 @@ $$
 
 Here $\lceil x \rceil$ means 'rounded up', namely, the smallest integer $k$ which satisfy $x\le k$. 
 
-The value of boolean formula $[...]$ is $1$, if and only if the statement `...` in it is true. Otherwise it has value $0$.
+The value of boolean formula $[...]$ is $1$, if and only if the statement `...` in it is true. Otherwise, it has value $0$.
 
 It's not hard to see that our recursion is well-defined, that is, given $n,m$, the value of $f(n, m)$ is uniquely determined.
 
@@ -29,12 +29,12 @@ You only need to output answer modulo $10^9+7$ .
 
 Multiple testcases.
 
-First line, an integer $T$, denotes the number of testcases.
+The first line, an integer $T$, denotes the number of testcases.
 
-Following $T$ lines, each line contains four integers, seperated by space, denotes $L,R,D,U$ respectively.
+Following $T$ lines, each line contains four integers, separated by space, denotes $L, R, D, U$ respectively.
 
 It's guaranteed that $T\le 50$, the **abosolute value** of $L,R,U,D$ doesn't exceed $10^{18}$, and $L\le R, D\le U$ .
 
 {{ s('output format') }}
 
-For each testcases, print a single line contains a single integer, denotes the answer after modulo $10^9+7$ .
+For each testcase, print a single line contains a single integer denotes the answer after modulo $10^9+7 $.

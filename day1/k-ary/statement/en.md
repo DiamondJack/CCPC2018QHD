@@ -4,9 +4,9 @@
 
 Little Chimaki prepare a problem for you today!
 
-She generates all $k$-ary trees that contains exactly $n$ nodes. A $k$-ary tree is a rooted tree in which each node has no more than $k$ children. Binary tree is the special case where $k=2$.
+She generates all $k$-ary trees that contain exactly $n$ nodes. A $k$-ary tree is a rooted tree in which each node has no more than $k$ children. Binary trees are a special case where $k=2$.
 
-After that, she randomly pick one of them, let us denote it by $T$, then she calculate the size of each subtree on $T$, and sum them up. Formally, she calculate the following formula for $T$:
+After that, she randomly picks one of them, let us denote it by $T$, then she calculates the size of each subtree on $T$, and sum them up. Formally, she calculates the following formula for $T$:
 $$
 S_T=\sum_{u\in T}size_u
 $$
@@ -17,11 +17,11 @@ Now that Chimaki wants to know the expectation of $S_T$, or in other words, let 
 $$
 \frac{1}{|T\_set|}\sum_{T\in T\_set}S_T
 $$
-Two $k$-ray tree are different if the following function returns *True*.
+Two $k$-ray trees are different if the following function returns *True*.
 
 ```c++
 struct Node {
-    Node *ch[k];	//this->ch[i] points to the kth child of this Node
+    Node *ch[k];    //this->ch[i] points to the kth child of this Node
 };
 
 bool cmp(Node* T1, Node* T2)
@@ -39,15 +39,15 @@ bool cmp(Node* T1, Node* T2)
 
 The input consists of multiple testcases.
 
-First line of the input is an integer $T$, denotes the number of the testcases. The value of $T$ is about $20$.
+The first line of the input is an integer $T$, denotes the number of the testcases. The value of $T$ is about $20$.
 
 Each of the following $T$ lines provides two integers $n,k$, denotes that Chimaki generates $k$-ary trees contains $n$ node(s).
 
-It is guaranteed that in each testcases the value of $n,k$ satisfies $1\le n\le 6\times 10^4, 1\le k \le 10^9$. There are at most 3 testcases with $n \ge 4\times 10^4$.
+It is guaranteed that in each testcase the value of $n,k$ satisfies $1\le n\le 6\times 10^4, 1\le k \le 10^9$. There are at most 3 testcases with $n \ge 4\times 10^4$.
 
 {{ s('output format') }}
 
-It is obviously that the answer is a rational number and can be denote with $\frac{p}{q}$ where $p,q$ are relatively prime. Let $P=998244353$, you need to find $0\le s <P$ that satisfies $p\equiv sq (\bmod P)$.
+It is obvious that the answer is a rational number and can be denoted with $\frac{p}{q}$ where $p,q$ are relatively prime. Let $P=998244353$, you need to find $0\le s <P$ that satisfies $p\equiv sq (\bmod P)$.
 
 For each testcases, output the value of $s$ in a single line.{{ s('sample', 1) }}
 

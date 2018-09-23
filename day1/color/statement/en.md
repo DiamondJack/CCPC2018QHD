@@ -12,7 +12,7 @@ Now they made their description in some order. After that, Yazid will do the fol
 2. Remove all non-alphabetic characters.
 3. Change all uppercase letters to lowercase.
 
-For example, if the initial string is `Yazid is green.Alice is red.Bob is blue.`, then after Yazid's all operation, they will be turn to `yazidisgreenaliceisredbobisblue`.
+For example, if the initial string is `Yazid is green. Alice is red. Bob is blue.`, then after Yazid's all operation, they will be turned to `yazidisgreenaliceisredbobisblue`.
 
 Finally, Alice and Bob will insert any lowercase letters in any position in this string and get **final string**.
 
@@ -26,9 +26,9 @@ You are given the final string. Your task is to find the initial string. In part
 
 {{ self.input_file() }}
 
-Input data contains multiple cases. The first line contains one integer $T$, representing the number of test cases. For each cases:
+Input data contains multiple cases. The first line contains one integer $T$, representing the number of test cases. For each case:
 
-* One line of string containing only lowercase letters, representing the final string.
+* One line of a string containing only lowercase letters, representing the final string.
 
 * It is guaranteed that the length of final string won't exceed $600$.
 
@@ -38,7 +38,7 @@ $T\leq 500$
 
 {{ self.output_file() }}
 
-For each cases:
+For each case:
 
 * One line of string, representing the initial string.
 
