@@ -1,0 +1,13 @@
+K=50268147
+B=6082187
+P=100000007
+
+function get_rand(l, r)
+	X = (K * X + B) mod P
+	return X mod (r - l + 1) + l
+
+function Init()
+	Input(n,m,seed)
+	X = seed
+	for i = 1 to n
+		c[i] = get_rand(1, m)
