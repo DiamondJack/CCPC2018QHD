@@ -17,12 +17,14 @@ The value of boolean formula $[...]$ is $1$, if and only if the statement `...` 
 
 It's not hard to see that our recursion is well-defined, that is, given $n,m$, the value of $f(n, m)$ is uniquely determined.
 
-Here we give three examples: $f(1,0)=1$, $f(-1,1)=1$ and $f(0,1)=2$ .
+Here we give three examples: $f(1,0)=1$, $f(-1,1)=2$ and $f(0,1)=3$ .
 
-Now it comes to your part: given integers $L,R,D,U$, please calculate the following:
+Now it comes to your part: given integers $N, M$, please calculate the following:
+
 $$
-\sum_{i=L}^{R}\sum_{j=D}^{U} f(i, j)
+\sum_{i=-N}^{N}\sum_{j=-M}^{M} f(i, j)
 $$
+
 You only need to output answer modulo $10^9+7$ .
 
 {{ s('input format') }}
@@ -31,10 +33,15 @@ Multiple testcases.
 
 The first line, an integer $T$, denotes the number of testcases.
 
-Following $T$ lines, each line contains four integers, separated by space, denotes $L, R, D, U$ respectively.
+Following $T$ lines, each line contains two integers, separated by space, denotes $N, M$ respectively.
 
-It's guaranteed that $T\le 50$, the **abosolute value** of $L,R,U,D$ doesn't exceed $10^{18}$, and $L\le R, D\le U$ .
+It's guaranteed that $T\le 1000$,  $0\le N, M\le 10^{15}$.
 
 {{ s('output format') }}
 
 For each testcase, print a single line contains a single integer denotes the answer after modulo $10^9+7 $.
+
+{{ s('sample', 1) }}
+
+{{ self.sample_text() }}
+
