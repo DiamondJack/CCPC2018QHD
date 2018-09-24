@@ -4,7 +4,7 @@
 
 Alice, Bob and Yazid are good friends.
 
-Each of them has a color, **r**ed, **g**reen or **b**lue. They can describe their own color in the format of `[name] is [color].`, such as `Yazid is green.`.
+Each of them has a color, **r**ed, **g**reen or **b**lue. Everyone's color is different from others'. They can describe their own color in the format of `[name] is [color].`, such as `Yazid is green.`.
 
 Now they have made their descriptions in some order. After that, Yazid will do the following operations:
 
