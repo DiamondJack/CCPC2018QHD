@@ -2,7 +2,7 @@
 
 ## Description
 
-Kblack loves flags. He has $n$ flags on a row, placing from left to right. The left $x$-th is numbered $x$, whose color is $c[x]$. We use the numbers ranged from $[1,m]$ to describe the flags' colors.
+Kblack loves flags. He has $n$ flags in a row, placing from left to right. The left $x$-th is numbered $x$, whose color is $c[x]$. We use the numbers ranged from $[1,m]$ to describe the flags' colors.
 
 Kblack wants to calculate$$\sum_{1\leq i< j\leq n \bigwedge c[j]=c[i]} \left( j-i\right) ^2$$
 
@@ -16,9 +16,9 @@ You should generate the input data in your program.
 
 We have a private variable $x$ in the generation, which equals to $seed$ initially. When you call for a random number ranged from $[l,r]$, the generation transforms $x$ into $\left(50268147x+6082187\right)\ mod\ 100000007$. And then, it returns $x\ mod\ \left(r-l+1 \right)+l$.
 
-The first line contains a single integer $T$ refers to the number of test cases.
+The first line contains a single integer $T$ referring to the number of test cases.
 
-For each test case, there is a single line contains 3 integers $n,m,seed$.
+For each test case, there is a single line containing 3 integers $n,m,seed$.
 
 Then, you need to generate the $n$ flags' colors one by one.
 
@@ -38,7 +38,7 @@ $\left(0\leq seed<100000007 \right)$
 
 {{ self.output_file() }}
 
-For each test case, output one line a single integer denoting the answer.
+For each test case, output one line with a single integer denoting the answer.
 
 {{ self.sample_text() }}
 
