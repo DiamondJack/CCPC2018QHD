@@ -9,7 +9,7 @@ Given a positive integer $k$, we define a **rooted** tree to be $k$-perfect, if 
 
 Now you are given an **unrooted** tree, and you should answer these questions:
 
-* It is possible to assign it a root, such that the tree becomes $k$-perfect for some positive integer $k$?
+* Is it possible to assign it a root, such that the tree becomes $k$-perfect for some positive integer $k$?
 * If possible, what is the minimal possible $k$?
 
 {{ s('input format') }}
