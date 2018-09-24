@@ -14,7 +14,7 @@ If there are more than one pair of $i,j$, please output the pair with minimum $i
 
 The first line contains one integer $n$, which denotes the size of $a$.
 
-The second line contains $n$ integers $a[i]\dots a[n]$. It is guaranteed that for each $a[i]$, its absolute value does not exceeds ${{ tools.hn(prob.args['a']) }}$.
+The second line contains $n$ integers $a[i]\dots a[n]$. It is guaranteed that for each $a[i]$, its absolute value does not exceed ${{ tools.hn(prob.args['a']) }}$.
 
 $(1\leq n\leq {{ tools.hn(prob.args['n']) }})$
 
