@@ -579,6 +579,8 @@ bool check()
 }
 int main()
 {
+	freopen("1.in","r",stdin);
+	freopen("1.ans","w",stdout);
 	scanf("%d",&T);
 	while (T--)
 	{
