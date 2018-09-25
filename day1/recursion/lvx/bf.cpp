@@ -20,13 +20,14 @@ int calc(int n, int m) {
 
 int main() {
 
-	freopen(".in", "r", stdin);
+	// freopen(".in", "r", stdin);
 	
 	int T, l, r, u, d;
 	cin >> T;
 	for (int i = 0; i < T; ++i) {
 		int ans = 0;
-		cin >> l >> r >> u >> d;
+		cin >> r >> d;
+		l = -r; u = -d;
 		for (int j = l; j <= r; ++j) {
 			for (int k = u; k <= d; ++k) {
 				ans = add(ans, calc(j, k));
