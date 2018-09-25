@@ -7,6 +7,7 @@ folder: problem
 memory limit: 512 MB
 name: perfect
 partial score: false
+pre: []
 samples:
 - cases: [1]
 time limit: 10.0
@@ -15,4 +16,6 @@ type: program
 users:
   saffah:
     std.cpp: {expected: == 100, path: saffah/std.cpp}
+  ufozgg:
+    std_vali.cpp: {expected: == 100, path: ufozgg/std_vali.cpp}
 version: 2

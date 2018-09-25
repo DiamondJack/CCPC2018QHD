@@ -16,4 +16,6 @@ type: program
 users:
   ufozgg:
     std.cpp: {expected: == 100, path: ufozgg/std.cpp}
+  wyz:
+    std.cpp: {expected: == 100, path: wyz/std.cpp}
 version: 2

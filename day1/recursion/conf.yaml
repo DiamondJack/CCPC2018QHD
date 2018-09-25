@@ -15,5 +15,22 @@ title: {zh-cn: Recursion}
 type: program
 users:
   immortalCO:
+    bf.cpp:
+      expected: []
+      path: immortalCO/bf.cpp
+    fast.cpp:
+      expected: []
+      path: immortalCO/fast.cpp
+    force.cpp:
+      expected: []
+      path: immortalCO/force.cpp
     std.cpp: {expected: == 100, path: immortalCO/std.cpp}
+  lvx:
+    bf.cpp:
+      expected: []
+      path: lvx/bf.cpp
+    fast.cpp:
+      expected: []
+      path: lvx/fast.cpp
+    std.cpp: {expected: == 100, path: lvx/std.cpp}
 version: 2

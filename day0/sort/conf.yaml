@@ -1,0 +1,19 @@
+args: {Q: 500000, a: 1000000000, n: 2000}
+compile: {c: -O2 -lm, cpp: -O2 -lm, pas: -O2}
+data:
+- cases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+folder: problem
+memory limit: 512 MB
+name: sort
+packed: false
+partial score: false
+pre: []
+samples:
+- cases: [1]
+time limit: 1.0
+title: {en: Sort, zh-cn: 用于试题标题的中文名称}
+type: program
+users:
+  jkxing: {bf.cpp: jkxing//bf.cpp}
+  wyz: {std.cpp: wyz//std.cpp, wa1.cpp: wyz//wa1.cpp, wa2.cpp: wyz//wa2.cpp, wa3.cpp: wyz//wa3.cpp}
+version: 0
