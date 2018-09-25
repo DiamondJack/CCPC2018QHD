@@ -2,33 +2,31 @@
 
 {{ s('description') }}
 
-T国在为未来可能发生的战争做准备时，修建了 $n$ 个通讯站，编号 $1$ 至 $n$，其中 $1$ 号通讯站设在首都，任意两个通讯站之间都**可能**存在**一条或多条双向通讯线路**，进而组成一个通讯网络，两个被通讯线路直接或间接连通的通讯站可以互相通信，一共有 $m$ 条通讯线路。
+In preparation for a possible war in the future, Country T has built $n$ communication stations, numbered from $1$ to $n$, with the No. $1$ station located in the capital, and the No. $n$ station located nearest to the troops stationed in the front-line. There **may be one or more bidirectional** communication lines between any two communication stations, thus forming a communication network with $m$ communication lines. Communication stations, directly or indirectly connected by communication lines can communicate with each other. If a communication line is destroyed, it can no longer transmit information. The whole communication network is paralyzed, if the No. $1$ station and the No. $n$ station can no longer communicate with each other.
 
-随着国际关系的日趋紧张，T国高层认为很可能会在不久的将来与邻国发生冲突，所以T国高层决定，加固连接在首都 $1$ 号通讯站与离前线驻扎部队最近的 $n$ 号通讯站之间的通讯网络。但是因为能用来加固通讯网络的经费十分有限，所以T国高层决定请来绝顶聪明的你来规划出最好的加固方案。
+With the increasing tension in international relations, the top leader of Country T thought it probable that conflicts with the neighboring country would happen in the near future. So he decided to strengthen the communication network. Considering the limited military expenditure, the leader asked you, the most intelligent team, to plan a best scheme.
 
-加固通讯网络的过程实际上是对全部或部分已有通讯线路进行增建的过程，我们认为现有的通讯线路都是不堪一击的，即敌人可以不费什么力气就破坏掉所有通讯线路，所以我们要合理提高部分线路的安全等级使得敌人不那么容易破坏我们的通讯线路。
+We believe that the existing communication network is too easy to be destroyed. The enemy can destroy any communication line with little efforts at zero cost. So we should reasonably raise the security level of some lines.
 
-工程队对所有通讯线路进行了评估，对于任意编号为 $i$ 的通讯线路，工程队认为每提高一级该线路的安全等级就需要花费 $cost_i$ 的经费，而由于各种原因，该线路最高提高 $max_i$ 的安全等级。
+The engineering team has assessed all communication lines. For a communication line numbered $i$, $cost_i$ is required for each level increased, and the possible highest level is $max_i$ for various reasons. After reinforcement, the cost for the enemy to destroy the line will be equal to its security level.
 
-在加固工程结束后，我们对未来可能的情况做出最坏假设，即敌人知晓了我们的通讯网络构造。而对于我们加固工程结束后的任意一条通讯线路 $i$ ，我们认为敌人如要破坏该线路，则需要花费等同于该线路安全等级 $level_i$  的代价。被敌人破坏的通讯线路不再能传输信息，我们可以认为其消失，若位于首都的 $1$ 号通讯站与位于前线的 $n$ 号通讯站不再能互相通信，则我们认为我们的通讯网络瘫痪了。而知晓我们的通讯网络构造的敌人则会花最低的代价破坏掉我们的通讯网络中的一些通讯线路使得我们的通讯网络瘫痪。
+Let’s imagine the worst case in the future, in which the structure of the reinforced communication network is known by the enemy. The cost for destroying a communication station is enormous compared to destroying a communication line, so the enemy will not try to destroy the communication station. Instead, they will try to pay the lowest cost to destroy some of the communication lines to paralyze the communication network.
 
-临危受命的你的工作则是，根据工程队提供的数据，在最大经费消耗为 $F$ 的情况下，决定每一条线路加固的安全等级，使得敌人破坏我们的通讯线路致我们的通讯网络瘫痪的代价最大。
-
-（相比于破坏通讯线路，破坏通讯站的代价是巨大的，所以敌人不会来攻击通讯站）
+Given the limited total amount of reinforcement cost $F$, you are asked to determine the security level of each line to be reinforced according to the data provided by the engineering team, so that the cost is highest for the enemy to make the communications network paralyzed.
 
 {{ s('input format') }}
 
 {{ self.input_file() }}
 
-第一行三个正整数 $ n, m, F $ ，分别代表通讯站个数、通讯线路数和经费消耗限制($1 \leq n \leq 1000, 0 \leq m \leq 10000, 1 \leq F \leq 10^{18} $)
+The first line contains three integers: $n$, $m$, and $F$, standing for the number of communication stations, the number of communication lines and the limit amount of reinforcement cost ($1 \leq n \leq 1000, 0 \leq m \leq 10000, 1 \leq F \leq 10^{18} $).
 
-接下来 $ m $ 行每行四个正整数 $ u_i, v_i, max_i, cost_i $ ，代表有一条连接 $ u_i $ 号通讯站和 $ v_i $ 号通讯站的通讯线路，最高提高的安全等级为 $max_i$ ，每提高一级安全等级需要消耗 $cost_i$ 的经费。($1 \leq u_i, v_i \leq n, 1 \leq max_i \leq 1000, 0 \leq cost_i \leq 10^6, u_i \neq v_i$)
+For the following $m$ lines, each contains four integers, $u_i$, $v_i$, $max_i$ and $cost_i$, which means there is a line between station $u_i$ and $v_i$ with the possible highest security level $max_i$ and it costs $cost_i$ for every security level increased ($1 \leq u_i, v_i \leq n, 1 \leq max_i \leq 1000, 0 \leq cost_i \leq 10^6, u_i \neq v_i$).
 
 {{ s('output format') }}
 
 {{ self.output_file() }}
 
-输出包含一个整数，代表敌人破坏我们的通讯网络致我们的通讯网络瘫痪的代价的最大值。
+Output an integer indicating the minimum cost to paralyze the communication network for the best reinforcement scheme.
 
 {{ s('sample', 1) }}
 
@@ -36,7 +34,7 @@ T国在为未来可能发生的战争做准备时，修建了 $n$ 个通讯站�
 
 {{ self.title_sample_description() }}
 
-我们将通讯线路 $(1,2)$ 和 $(5,6)$ 的安全等级提高至2，$(2,3)$，$(2,4)$，$(3,5)$和 $(4,5)$ 的安全等级提高至1，即可使敌人的代价最大，经费消耗 $8$ ，不超过 $10$ 。而敌人要想破坏这条线路，最少花费 $2$ 的代价，例如：破坏掉等级为2的线路$(1,2)$。而敌方不可能以$1$的代价破坏掉通信网络，因为其无法破坏$(1,2)$或$(5,6)$的线路，而破坏掉$(2,3)$或$(3,5)$时，路径 1-2-4-5-6可以正常工作，破坏掉$(2,4)$或$(4,5)$时，路径1-2-3-5-6可以正常工作。
+For line $(1,2)$ and $(5,6)$, increase the security level to 2; For line $(2,3)$, $(2,4)$, $(3,5)$ and $(4,5)$, increase the security level to 1. This is the best scheme with the total reinforcement cost as $8$, less than $10$. It will cost the enemy $2$ at least to paralyze the communication network. For example, the enemy can pay 2 to destroy $(1,2)$. The enemy cannot parayze the communication network only at cost $1$, because they cannot destroy line $(1,2)$ or $(5,6)$. If they destroy line $(2,3)$ or $(3,5)$, the path $1-2-4-5-6$ enables communication; if they destroy line $(2,4)$ or $(4,5)$, the path $1-2-3-5-6$ enables communication.
 
 {{ s('sample', 2) }}
 
@@ -44,8 +42,4 @@ T国在为未来可能发生的战争做准备时，修建了 $n$ 个通讯站�
 
 {{ self.title_sample_description() }}
 
-我们将通讯线路 $(1,2)$ 和 $(5,6)$ 的安全等级提高至上限 $5$（反正不消耗经费），$(2,3)$，$(2,4)$，$(3,5)$和 $(4,5)$ 的安全等级提高至 $2$，即可使敌人的代价最大，经费消耗 $8$。敌方可以花费 $4$ 的代价破坏掉$(2,3)$和$(2,4)$，可以证明不存在更优策略。
-
-## 数据范围
-
-**对于全部数据：** $1 \leq n \leq 1000, 0 \leq m \leq 10000, 1 \leq F \leq 10^{18}, 1 \leq u_i, v_i \leq n, 1 \leq max_i \leq 1000, 0 \leq cost_i \leq 10^6, u_i \neq v_i$
+For line $(1,2)$ and $(5,6)$, increase the security level to 5 at zero cost. For line $(2,3)$, $(2,4)$, $(3,5)$ and $(4,5)$, increase the security level to $2$. It can be proved that this is the best scheme with the total reinforcement cost as $8$. It will cost the enemy $4$ to paralyze the communication network by destroying line $(2,3)$ and $(2,4)$.
