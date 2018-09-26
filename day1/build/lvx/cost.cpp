@@ -116,6 +116,7 @@ int main() {
 		int x, y, u, v;
 		cin >> x >> y >> u >> v;
 		my.addEdge(x, y, u, v);
+		my.addEdge(y, x, u, v);
 	}
 	printf("%d\n", my.run(1, n, flow));
 	return 0;
