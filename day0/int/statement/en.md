@@ -1,6 +1,6 @@
 {{ self.title() }}
 
-## Description
+{{ s('description') }}
 
 You are given $n$ integers $a[1]\dots a[n]$, and you can choose any two numbers from $a$. If you choose $a[i]$ and $a[j]$, you will get $a[i]-a[j]$ points.
 
@@ -8,7 +8,7 @@ Now, you want to maximize your score. Please calculate your maximum score and wh
 
 If there are more than one pair of $i,j$, please output the pair with minimum $i$. If there are still more than one pair, please output the one with minimum $j$.
 
-## Input
+{{ s('input format') }}
 
 {{ self.input_file() }}
 
@@ -18,7 +18,7 @@ The second line contains $n$ integers $a[i]\dots a[n]$. It is guaranteed that fo
 
 $(1\leq n\leq {{ tools.hn(prob.args['n']) }})$
 
-## Output
+{{ s('output format') }}
 
 {{ self.output_file() }}
 

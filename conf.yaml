@@ -1,7 +1,7 @@
 folder: contest
 name: name_for_programers
-short title: {zh-cn: 正式的简称}
+short title: {zh-cn: 2018年~秦皇岛分站赛}
 subdir: [day1, day0]
-subtitle: {zh-cn: 子标题如冬令营}
-title: {zh-cn: 正式的中文名称}
+subtitle: {zh-cn: Qinghuangdao}
+title: {zh-cn: CCPC~2018}
 version: 2

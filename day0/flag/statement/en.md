@@ -1,6 +1,6 @@
 {{ self.title() }}
 
-## Description
+{{ s('description') }}
 
 Kblack loves flags. He has $n$ flags in a row, placing from left to right. The left $x$-th is numbered $x$, whose color is $c[x]$. We use the numbers ranged from $[1,m]$ to describe the flags' colors.
 
@@ -8,7 +8,7 @@ Kblack wants to calculate$$\sum_{1\leq i< j\leq n \bigwedge c[j]=c[i]} \left( j-
 
 Can you help him?
 
-## Input
+{{ s('input format') }}
 
 {{ self.input_file() }}
 
@@ -34,7 +34,7 @@ $\left(1\leq m\leq {{ tools.hn(prob.args['m']) }} \right)$
 
 $\left(0\leq seed<100000007 \right)$
 
-## Output
+{{ s('output format') }}
 
 {{ self.output_file() }}
 
