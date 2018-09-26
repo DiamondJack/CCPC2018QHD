@@ -4,7 +4,7 @@
 
 Little Chimaki prepares a problem for you today!
 
-She generates all $k$-ary trees that contain exactly $n$ nodes. A $k$-ary tree is a rooted tree in which each node has no more than $k$ children. Binary trees are a special case where $k=2$.
+She generates all $k$-ary trees that contain exactly $n$ nodes. A $k$-ary tree is a rooted tree in which each node has no more than $k$ children. Binary tree is the special case where $k=2$.
 
 After that, she randomly picks one of them. Let us denote it by $T$. Then she calculates the size of each subtree on $T$, and sums them up. Formally, she calculates the following formula for $T$:
 $$
@@ -17,7 +17,7 @@ Now Chimaki wants to know the expectation of $S_T$. In other words, let $T\_set$
 $$
 \frac{1}{|T\_set|}\sum_{T\in T\_set}S_T
 $$
-Two $k$-ary trees are different if the following function returns *True*.
+Two $k$-ary trees are different if and only if the following function returns *True*.
 
 ```c++
 struct Node {

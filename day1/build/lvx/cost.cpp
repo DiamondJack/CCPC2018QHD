@@ -118,6 +118,6 @@ int main() {
 		my.addEdge(x, y, u, v);
 		my.addEdge(y, x, u, v);
 	}
-	printf("%d\n", my.run(1, n, flow));
+	cout << my.run(1, n, flow) << endl;
 	return 0;
 }

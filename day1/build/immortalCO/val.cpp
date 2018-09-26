@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
 	while(M--) {
 		inf.readInt(1, N, "x"); inf.readSpace();
 		inf.readInt(1, N, "y"); inf.readSpace();
-		inf.readInt(1, 1e3, "f"); inf.readSpace();
+		inf.readInt(0, 1e3, "f"); inf.readSpace();
 		inf.readInt(0, 1e6, "c"); inf.readEoln();
 	}
 	inf.readEof();
