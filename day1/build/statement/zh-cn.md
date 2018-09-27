@@ -22,7 +22,7 @@ The first line contains three integers: $n$, $m$, and $F$, standing for the numb
 
 For the following $m$ lines, each contains four integers, $u_i$, $v_i$, $max_i$ and $cost_i$, which means there is a line between station $u_i$ and $v_i$ with the possible highest security level $max_i$ and it costs $cost_i$ for every security level increased.
 
-$1 \leq n \leq 1000, 0 \leq m \leq 10000, 1 \leq F \leq {10}^{18} $
+$1 \leq n \leq 1000, 0 \leq m \leq 10000, 1 \leq F \leq 10^{18}$
 
 $1 \leq u_i, v_i \leq n, 0 \leq max_i \leq 1000, 0 \leq cost_i \leq 10^6, u_i \neq v_i$
 
