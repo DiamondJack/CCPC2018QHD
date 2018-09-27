@@ -19,7 +19,7 @@ $$
 $$
 Two $k$-ary trees are different if and only if the following function returns *True*.
 
-```c++
+```
 struct Node {
     Node *ch[k];    //this->ch[i] points to the k-th child of this Node
 };
@@ -63,6 +63,6 @@ For each test case, output the value of $s$ in a single line.
 
 In the first test case, there are three possible $k$-ary trees:
 
-{{img('explanation.bmp')}}
+{{ img('explanation.png', size = 1, align = 'middle', inline = False) }}
 
 The value of $S$ of each tree is $3$. Thus the answer is $3$.
