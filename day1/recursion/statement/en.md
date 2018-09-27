@@ -11,7 +11,7 @@ $$
 \end{aligned}
 $$
 
-Here $\lceil x \rceil$ means 'rounded up', namely, the smallest integer $k$ which satisfies $x\le k$. 
+Here $\lceil x \rceil$ means **rounded up**, namely, the smallest integer $k$ which satisfies $x\le k$. 
 
 The value of boolean formula $[...]$ is $1$, if and only if the statement `...` in it is true. Otherwise, it has value $0$.
 
@@ -29,6 +29,8 @@ You only need to output the answer modulo $10^9+7$ .
 
 {{ s('input format') }}
 
+{{ self.input_file() }}
+
 There are multiple test cases.
 
 The first line, an integer $T$, denotes the number of test cases.
@@ -39,7 +41,9 @@ It's guaranteed that $T\le 1000$,  $0\le N, M\le 10^{15}$.
 
 {{ s('output format') }}
 
-For each test case, output an integer denoting the answer modulo $10^9+7 $.
+{{ self.output_file() }}
+
+For each test case, output an integer denoting the answer modulo $10^9+7$.
 
 {{ s('sample', 1) }}
 

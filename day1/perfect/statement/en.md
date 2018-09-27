@@ -9,8 +9,8 @@ Given a positive integer $k$, we define a **rooted** tree to be $k$-perfect, if 
 
 Now you are given an **unrooted** tree, and you should answer these questions:
 
-* Is it possible to assign it a root, such that the tree becomes $k$-perfect for some positive integer $k$?
-* If possible, what is the minimal possible $k$?
+* Is it possible to assign it a root, so that the tree becomes $k$-perfect for some positive integer $k$?
+* If possible, what is the minimal $k$?
 
 {{ s('input format') }}
 
@@ -33,7 +33,7 @@ The sum of $n$ in each input will not exceed $10^6$.
 For each test case, output a single integer in a line:
 
 * If the answer to the first question is "No", output $-1$.
-* Otherwise, output the minimal possible $k$.
+* Otherwise, output the minimal $k$.
 
 {{ s('sample', 1) }}
 
