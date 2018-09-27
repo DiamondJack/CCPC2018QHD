@@ -3,19 +3,7 @@ compile: {c: -O2 -std=c14, cpp: -O2 -std=c++14, java: '', pas: -O2, py: ''}
 data:
 - cases: [buildnet1, buildnet2, buildnet3, buildnet4, buildnet5, buildnet6, buildnet7,
     buildnet8, buildnet9, buildnet10, buildnet11, buildnet12, buildnet13, buildnet14,
-    buildnet15, buildnet16, buildnet17, buildnet18, buildnet19, buildnet20, buildnet21,
-    buildnet22, buildnet23, buildnet24, buildnet25, buildnet26, buildnet27, buildnet28,
-    buildnet29, buildnet30, buildnet31, buildnet32, buildnet33, buildnet34, buildnet35,
-    buildnet36, buildnet37, buildnet38, buildnet39, buildnet40, buildnet41, buildnet42,
-    buildnet43, buildnet44, buildnet45, buildnet46, buildnet47, buildnet48, buildnet49,
-    buildnet50, buildnet51, buildnet52, buildnet53, buildnet54, buildnet55, buildnet56,
-    buildnet57, buildnet58, buildnet59, buildnet60, buildnet61, buildnet62, buildnet63,
-    buildnet64, buildnet65, buildnet66, buildnet67, buildnet68, buildnet69, buildnet70,
-    buildnet71, buildnet72, buildnet73, buildnet74, buildnet75, buildnet76, buildnet77,
-    buildnet78, buildnet79, buildnet80, buildnet81, buildnet82, buildnet83, buildnet84,
-    buildnet85, buildnet86, buildnet87, buildnet88, buildnet89, buildnet90, buildnet91,
-    buildnet92, buildnet93, buildnet94, buildnet95, buildnet96, buildnet97, buildnet98,
-    buildnet99, buildnet100]
+    buildnet15, buildnet16, buildnet17, buildnet18, buildnet19, buildnet20]
 folder: problem
 memory limit: 512 MB
 name: build
