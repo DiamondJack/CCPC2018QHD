@@ -10,7 +10,7 @@ pre:
 - cases: [1]
 samples:
 - cases: [1]
-time limit: 20.0
+time limit: 30.0
 title: {en: Touchable Happiness}
 type: program
 users:

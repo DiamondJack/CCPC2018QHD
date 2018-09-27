@@ -10,10 +10,12 @@ partial score: false
 pre: []
 samples:
 - cases: [1]
-time limit: 1.0
+time limit: 2.0
 title: {zh-cn: Riddle}
 type: program
 users:
   MineHaHaTa:
     std.cpp: {expected: == 100, path: MineHaHaTa/std.cpp}
+  wyz:
+    std.cpp: {expected: == 100, path: wyz/std.cpp}
 version: 2
