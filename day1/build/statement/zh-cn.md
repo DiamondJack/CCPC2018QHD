@@ -10,17 +10,21 @@ We believe that the existing communication network is too easy to be destroyed. 
 
 The engineering team has assessed all communication lines. For a communication line numbered $i$, $cost_i$ is required for each level increased, and the possible highest level is $max_i$ for various reasons. After reinforcement, the cost for the enemy to destroy the line will be equal to its security level.
 
-Let’s imagine the worst case in the future, in which the structure of the reinforced communication network is known by the enemy. The cost for destroying a communication station is enormous compared to destroying a communication line, so the enemy will not try to destroy the communication station. Instead, they will try to pay the lowest cost to destroy some of the communication lines to paralyze the communication network.
+Let's imagine the worst case in the future, in which the structure of the reinforced communication network is known by the enemy. The cost for destroying a communication station is enormous compared to destroying a communication line, so the enemy will not try to destroy the communication station. Instead, they will try to pay the lowest cost to destroy some of the communication lines to paralyze the communication network.
 
-Given the limited total amount of reinforcement cost $F$, you are asked to determine the security level of each line to be reinforced according to the data provided by the engineering team, so that the cost is highest for the enemy to make the communications network paralyzed.
+Given the limited total amount of reinforcement cost $F$, you are asked to determine the security level of each line to be reinforced according to the data provided by the engineering team, so that the cost is highest for the enemy to make the communication network paralyzed.
 
 {{ s('input format') }}
 
 {{ self.input_file() }}
 
-The first line contains three integers: $n$, $m$, and $F$, standing for the number of communication stations, the number of communication lines and the limit amount of reinforcement cost ($1 \leq n \leq 1000, 0 \leq m \leq 10000, 1 \leq F \leq 10^{18} $).
+The first line contains three integers: $n$, $m$, and $F$, standing for the number of communication stations, the number of communication lines and the limit amount of reinforcement cost.
 
-For the following $m$ lines, each contains four integers, $u_i$, $v_i$, $max_i$ and $cost_i$, which means there is a line between station $u_i$ and $v_i$ with the possible highest security level $max_i$ and it costs $cost_i$ for every security level increased ($1 \leq u_i, v_i \leq n, 0 \leq max_i \leq 1000, 0 \leq cost_i \leq 10^6, u_i \neq v_i$).
+For the following $m$ lines, each contains four integers, $u_i$, $v_i$, $max_i$ and $cost_i$, which means there is a line between station $u_i$ and $v_i$ with the possible highest security level $max_i$ and it costs $cost_i$ for every security level increased.
+
+$1 \leq n \leq 1000, 0 \leq m \leq 10000, 1 \leq F \leq {10}^{18} $
+
+$1 \leq u_i, v_i \leq n, 0 \leq max_i \leq 1000, 0 \leq cost_i \leq 10^6, u_i \neq v_i$
 
 {{ s('output format') }}
 

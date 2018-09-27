@@ -1,6 +1,6 @@
 {{ s('description') }}
 
-Niuniu has a clock with two hands, an hour hand and a minute hand. Sometimes it looks like just having one hand because the two hands coincide. Niuniu wants to know how many times the two hands coincide from A’o clock to B’o clock ($0\le A < B \le 24$). (If the two hands coincide at A’o clock, it will be counted. But coincidence will not be counted at B’o clock.)
+Niuniu has a clock with two hands, an hour hand and a minute hand. Sometimes it looks like just having one hand because the two hands coincide. Niuniu wants to know how many times the two hands coincide from A'o clock to B'o clock ($0\le A < B \le 24$). (If the two hands coincide at A'o clock, it will be counted. But coincidence will not be counted at B'o clock.)
 
 {{ s('input format') }}
 
@@ -22,4 +22,4 @@ Output T lines, each line containing an integer as the answer of each case.
 
 {{ self.title_sample_description() }}
 
-From 14’o clock to 17’o clock, the two hands coincide three times at **about** 14:11,15:16 and 16:22 respectively.
+From 14'o clock to 17'o clock, the two hands coincide three times at **about** 14:11,15:16 and 16:22 respectively.
