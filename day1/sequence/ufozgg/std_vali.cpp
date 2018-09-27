@@ -1,14 +1,16 @@
 #include<cstdio>
 #include<cassert>
 #include<algorithm>
+#include<ctime>
 #define Mod 998244353
 using namespace std;
 int a[200100];
 int n,Q;
+int CLK;
 int idx,b;
-int ANS=-1;
-int pai[200100],dp[200100];
-int p2[200100];
+long long ANS=-1;
+long long pai[200100];
+long long p2[200100];
 int poww(int x,int y)
 {
 	if(y==0)
@@ -26,38 +28,43 @@ void solve(int w,int idx)
 {
 	int i,j;
 	long long R,A,B;
-		pai[0]=1;
-		for(i=1;i<=n;++i)
-			pai[i]=(long long)pai[i-1]*a[i]%Mod;
 	if(ANS==-1)
 	{
 		ANS=0;
 		for(i=1;i<=n;++i)
+		{
+			A=1;
 			for(j=i;j<=n;++j)
 			{
-				ANS=ANS+(long long)pai[j]*anti(pai[i-1])%Mod*p2[n-j+i-3+(i==1)+(j==n)]%Mod;
+				A=A*a[j]%Mod;
+				ANS+=A*p2[n-j+i-3+(i==1)+(j==n)]%Mod;
 				if(ANS>=Mod)
 					ANS-=Mod;
 			}
+		}
 	}
 	else
 	{
 		R=0;
 		A=0;
 		B=0;
-		for(i=1;i<=idx;++i)
+		R=1;
+		for(i=idx;i;--i)
 		{
-			A+=(long long)p2[i-2+(i==1)]*anti(pai[i-1])%Mod;
+			R=R*a[i]%Mod;
+			A+=p2[i-2+(i==1)]*R%Mod;
 			if(A>=Mod)
 				A-=Mod;
 		}
+		R=1;
 		for(i=idx;i<=n;++i)
 		{
-			B+=(long long)p2[n-i-1+(i==n)]*pai[i]%Mod;
+			B+=p2[n-i-1+(i==n)]*R%Mod;
 			if(B>=Mod)
 				B-=Mod;
+			R=R*a[i+1]%Mod;
 		}
-		R=(long long)A*B%Mod;
+		R=A*B%Mod;
 		ANS+=w*R;
 		if(ANS<0)
 			ANS+=Mod;
@@ -67,7 +74,8 @@ void solve(int w,int idx)
 }
 int main()
 {
-	//freopen("../down/2.in","r",stdin);
+	freopen("../data/1.in","r",stdin);
+	freopen("1.out","w",stdout);
 	int i,j;
 	scanf("%d",&n);
 	assert(1<=n&&n<=200000);
@@ -76,12 +84,12 @@ int main()
 		p2[i]=p2[i-1]*2%Mod;
 	for(i=1;i<=n;++i)
 	{
-		scanf("%d",a+i);
+		scanf("%lld",a+i);
 		assert(0<=a[i]&&a[i]<Mod);
 	}
 	scanf("%d",&Q);
 	solve(0,0);
-	printf("%d\n",ANS);
+	printf("%lld\n",ANS);
 	assert(0<=Q&&Q<=200000);
 	for(i=1;i<=Q;++i)
 	{
@@ -91,7 +99,7 @@ int main()
 		solve(-1,idx);
 		a[idx]=b;
 		solve(1,idx);
-		printf("%d\n",ANS);
+		printf("%lld\n",ANS);
 	}
 	return 0;
 } 

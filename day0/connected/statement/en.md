@@ -4,11 +4,9 @@
 
 ​Yuuka has got a tree of $n$ vertices. There is a value $a_i$ attached to the $i$-th vertex of the tree. Yuuka has a mysterious number $k$, and she wants to choose a non-empty connected subset of these $n$ vertices. In other words, for each pair $a,b$ of the chosen vertices, all vertices along the path between $a$ and $b$ must be chosen as well.
 
-​For a chosen subset of vertices $S$ , we are interested in the following characteristic of $S$, denoted by $f(S)$:
-$$
-f(S) := \sum_{i \in S} a_i \pmod k.
-$$
-​That is, the sum of all $a_i​$'s for the vertices in $S​$ modulo $k​$. 
+​For a chosen subset of vertices $S$ , we are interested in the following characteristic of $S$, denoted by $f(S)$: $$f(S) := \sum_{i \in S} a_i \mod k$$
+
+That is, the sum of all $a_i​$'s for the vertices in $S​$ modulo $k​$. 
 
 ​Yuuka is really concerned with counting problems, so she is interested in the following question: for each integer $i$ such that $1 \le i \le k -1$, how many distinct non-empty connected subsets $S$ satisfy $f(S) = i$?
 
