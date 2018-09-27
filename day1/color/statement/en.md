@@ -4,7 +4,7 @@
 
 Alice, Bob and Yazid are good friends.
 
-Each of them has a color, **r**ed, **g**reen or **b**lue. Everyone's color is different from the others'. They can describe their own color in the format of `[name] is [color].`, such as `Yazid is green.`.
+Each of them has a color, **r**ed, **g**reen or **b**lue. Everyone's color is different from the others'. They can describe their own colors in the format of `[name] is [color].`, such as `Yazid is green.`.
 
 Now they have made their descriptions in some order. After that, Yazid will do the following operations:
 
@@ -30,7 +30,7 @@ The first line contains one integer $T$ ($T\leq 500$), representing the number o
 
 * One line of a string containing only lowercase letters, representing the final string.
 
-* It is guaranteed that the length of final string won't exceed $600$.
+* It is guaranteed that the length of the final string won't exceed $600$.
 
 
 ## {{ _('Output Format') }}
@@ -39,7 +39,7 @@ The first line contains one integer $T$ ($T\leq 500$), representing the number o
 
 For each case:
 
-* One line of string, representing the initial string or `No solution.`.
+* One line of a string, representing the initial string or `No solution.`.
 
 {% set vars = {} -%}
 {%- do vars.__setitem__('sample_id', 1) -%}

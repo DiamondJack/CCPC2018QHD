@@ -21,7 +21,7 @@ Two $k$-ary trees are different if and only if the following function returns *T
 
 ```c++
 struct Node {
-    Node *ch[k];    //this->ch[i] points to the kth child of this Node
+    Node *ch[k];    //this->ch[i] points to the k-th child of this Node
 };
 
 bool cmp(Node* T1, Node* T2)
@@ -51,7 +51,7 @@ It is guaranteed that in each test case the values of $n$ and $k$ satisfy $1\le 
 
 {{ self.output_file() }}
 
-It is obvious that the answer is a rational number and can be denoted with $\frac{p}{q}$, where $p,q$ are relatively prime. Let $P=998244353$, you need to find $0\le s <P$ that satisfies $p\equiv sq (\bmod P)$.
+It is obvious that the answer is a rational number and can be denoted with $\frac{p}{q}$, where $p,q$ are relatively prime. Let $P=998244353$, and you need to find $0\le s <P$ that satisfies $p\equiv sq (\bmod P)$.
 
 For each test case, output the value of $s$ in a single line.
 
