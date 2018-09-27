@@ -46,7 +46,7 @@ There are several test cases in the data. the first line contains one integer $T
 
 The first line contains three integers $k,n,m$ whose meaning is given in the above statement. It is guaranteed that $n,m$ are no more than $10$ and $k$ is no more than $30$.
 
-For the next $k$ lines, the $i$-th line contains a string with length $m$, each letter representing a candy given in the game. Candies with the same color are represented by the same letter. It is guaranteed that each letter is between '$A$'~'$F$'.
+For the next $k$ lines, the $i$-th line contains a string with length $m$, each letter representing a candy given in the game. Candies with the same color are represented by the same letter. It is guaranteed that each letter is between '$A$' and '$F$'.
 
 It is also guaranteed that there will not be three or more candies with the same color adjoining in a row or column initially in the game area. Notice that there is no vertical striped candies, horizontal striped candies or chocolate candies initially.
 
@@ -54,7 +54,7 @@ It is also guaranteed that there will not be three or more candies with the same
 
 {{ self.output_file() }}
 
-For each test case, output one integer that the final scores Kiana will get in the game.
+For each test case, output one integer that is the final score Kiana will get in the game.
 
 {{ s('sample', 1) }}
 
