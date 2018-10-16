@@ -7,7 +7,7 @@ Let's define a recursion $f(n, m)$ as follows:
 $$
 \begin{aligned}
 &f(0,0)=0 \\
-&f(x, y) = 2\cdot f\left( \left\lceil \frac{y-x}{2} \right\rceil + \left\lceil \frac{-x-y}{2} \right\rceil \right) + [x+y\equiv 1\bmod 2]
+&f(x, y) = 2\cdot f\left( \left\lceil \frac{y-x}{2} \right\rceil , \left\lceil \frac{-x-y}{2} \right\rceil \right) + [x+y\equiv 1\bmod 2]
 \end{aligned}
 $$
 
